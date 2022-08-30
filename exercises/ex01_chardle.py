@@ -1,13 +1,14 @@
-"""Chardle excersice"""
+"""EX01 - Chardle - A cute step towards Wordle."""
+
 __author__ = "730555430"
 
-input_word: str = input("Name a 5 letter word: ")
+input_word: str = input("Enter a 5-character word: ")
 if len(input_word) != 5:
-    print("Word must be 5 characters long!")
+    print("Word must contain 5 characters")
     quit()
-guess_letter: str = input("Name a letter: ")
+guess_letter: str = input("Enter a single character: ")
 if len(guess_letter) != 1:
-    print("Please input 1 character!")
+    print("Character must be a single character.")
     quit()
 print("Searching for " + guess_letter + " in " + input_word)
 
