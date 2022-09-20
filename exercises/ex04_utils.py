@@ -1,9 +1,10 @@
-"""Ex04 - List utilities"""
+"""Ex04 - List utilities."""
 
 __author__ = "730555430"
 
+
 def all(the_list: list[int], the_int: int) -> bool:
-   
+    """If a number is in a list."""
     contains: bool = False
     counter: int = 0
 
@@ -13,13 +14,14 @@ def all(the_list: list[int], the_int: int) -> bool:
             counter += 1
         else:
             return False
-    return True
-#done, works
+    return contains
+
 
 def max(input: list[int]) -> int:
+    """Returns largest number in a list."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
-    biggest: int = 0
+    biggest: int = input[0]
     counter: int = 0
     while (counter < len(input)):
         if input[counter] > biggest:
@@ -28,9 +30,10 @@ def max(input: list[int]) -> int:
         else:
             counter += 1
     return biggest
-# done, works
+
 
 def is_equal(first: list[int], second: list[int]) -> bool:
+    """Determines if two lists are equal."""
     counter: int = 0
     equal: bool = False
     if len(first) != len(second):
