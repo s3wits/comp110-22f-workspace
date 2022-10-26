@@ -2,6 +2,7 @@
 
 __author__ = 730555430
 
+
 def only_evens(even: list[int]) -> list[int]:
     """Returns the even numbers in a list."""
     even_list: list[int] = list()
@@ -10,17 +11,22 @@ def only_evens(even: list[int]) -> list[int]:
             even_list.append(number)
     return even_list
 
+
 def concat(one: list[int], two: list[int]) -> list[int]:
     """Adds two lists together."""
     combined: list[int] = list(one + two)
     return combined
 
+
 def sub(a_list: list[int], begin: int, end: int) -> list[int]:
-    """Returns items in the list"""
+    """Returns items in the list."""
     final: list[int] = list()
     counter: int = 0
 
     if len(a_list) == 0:
+        return final
+
+    if begin == len(a_list):    
         return final
 
     if begin > len(a_list):
@@ -28,6 +34,9 @@ def sub(a_list: list[int], begin: int, end: int) -> list[int]:
 
     if end <= 0:
         return final
+    
+    if end > len(a_list):
+        end = len(a_list)
 
     counter: int = 0
     while len(a_list) >= counter:
